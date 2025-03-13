@@ -208,6 +208,22 @@ header {
     justify-content: center;
     color: white;
 }
+.gist-container {
+    width: 100%;
+    overflow: auto; /* Adiciona scroll se o conteúdo for muito grande */
+}
+
+.gist-container iframe {
+    width: 100% !important; /* Força o iframe a ocupar 100% da largura do contêiner */
+    height: auto !important; /* Altura ajustável */
+    border: none; /* Remove a borda padrão do iframe */
+}
+
+@media (max-width: 768px) {
+    .gist-container iframe {
+        height: 300px; /* Altura fixa para dispositivos móveis */
+    }
+}
 
 .grade-excellent { background-color: #27ae60; }
 .grade-great { background-color: #2ecc71; }
